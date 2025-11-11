@@ -1,5 +1,7 @@
 export default function Companions() {
   return (
-    <h1>Companions Page</h1>
+    <main>
+      <h1>Companion Page</h1>
+    </main>
   )
 }
