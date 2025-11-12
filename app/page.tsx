@@ -7,7 +7,7 @@ import { recentSessions } from "@/constants";
 export default function Page() {
   return (
     <main>
-      <h1 className="text-2xl underline" >Popular Companions</h1>
+      <h1 className="text-2xl" >Popular Companions</h1>
       <section className="home-section">
         <CompanionCard
           id="1"
