@@ -11,7 +11,6 @@ import Image from "next/image";
 import { CircleCheck, GraduationCap } from "lucide-react";
 import CompanionsList from "@/components/CompanionsList";
 
-
 export default async function Profile() {
 
     const user = await currentUser();
@@ -19,7 +18,6 @@ export default async function Profile() {
     if (!user) {
         redirect('/sign-in');
     }
-
 
     const companions = await getUserCompanions(user.id);
     const sessionHistory = await getUserSessions(user.id);
@@ -31,8 +29,9 @@ export default async function Profile() {
                     <Image
                         src={user.imageUrl}
                         alt={user.firstName!}
-                        width={110}
-                        height={110}
+                        width={120}
+                        height={120}
+                        className="rounded-full object-cover"
                     />
                     <div className="flex flex-col gap-2">
                         <h1 className="font-bold text-2xl">
