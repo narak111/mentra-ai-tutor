@@ -12,9 +12,6 @@ const bricolage = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "Vapi-ai-tutor",
   description: "Real-time AI Teaching Platform",
-  icons: {
-    icon: "/icons/logo.svg"
-  }
 };
 
 export default function RootLayout({

@@ -13,33 +13,43 @@ export default async function NewCompanion() {
   const canCreateCompanion = await newCompanionPermission();
 
   return (
-    <main className="lg:w-1/3 min-md:2-2/3 items-center justify-center">
+    <main className=" max-w-4xl items-center justify-center">
       {canCreateCompanion ? (
         <article className="w-full gap-4 flex flex-col">
           <h1>Companion Builder</h1>
           <CompanionForm />
         </article>
       ) : (
-        <article className="companion-limit" >
+        <article className="flex flex-col items-center text-center space-y-6">
           <Image
             src="/images/limit.svg"
             alt="Companion Limit Reached"
-            width={350}
-            height={350}
+            width={300}
+            height={300}
+            className="mx-auto w-64 h-auto sm:w-80"
+            priority
           />
+
           <div className="cta-badge">
             Upgrade your plan
           </div>
-          <h1 className="text-2xl font-bold">
+
+          <h1 className="text-2xl sm:text-3xl font-semibold">
             You&apos;ve Reached Your Limit
           </h1>
-          <p className="text-base">
-            You&apos;ve reached your Companion limit. Please upgrade to create more companions and get access to more premium feature.
+
+          <p className="max-w-md text-muted-foreground text-base sm:text-lg">
+            You&apos;ve reached your Companion limit. Please upgrade to create
+            more companions and get access to additional premium features.
           </p>
-          <Button asChild variant="default" size="lg" className="rounded-xl w-full justify-center"          >
-            <Link href="/pricing">
-              Upgrade My Plan
-            </Link>
+
+          <Button
+            asChild
+            variant="default"
+            size="lg"
+            className="rounded-xl w-full justify-center"
+          >
+            <Link href="/pricing">Upgrade My Plan</Link>
           </Button>
         </article>
       )}
