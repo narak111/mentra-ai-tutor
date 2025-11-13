@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import soundwaves from '@/constants/soundwaves.json'
 import { Button } from "./ui/button";
 import { MicOffIcon, MicIcon, PhoneOff, Loader } from "lucide-react";
+import { addToSessionHistory } from "@/lib/actions/companion.actions";
 
 enum CallStatus {
     INACTIVE = 'INACTIVE',
@@ -36,7 +37,10 @@ export default function CompanionComponent({ companionId, subject, name, topic, 
 
     useEffect(() => {
         const onCallStart = () => setCallStatus(CallStatus.ACTIVE);
-        const onCallEnd = () => setCallStatus(CallStatus.FINISHED);
+        const onCallEnd = () => {
+            setCallStatus(CallStatus.FINISHED)
+            addToSessionHistory(companionId);
+        };
         const onSpeechStart = () => setIsSpeaking(true);
         const onSpeechEnd = () => setIsSpeaking(false);
 

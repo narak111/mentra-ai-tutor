@@ -10,6 +10,7 @@ import {
 import { cn, getSubjectColor } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Clock } from 'lucide-react';
 
 interface CompanionsListProps {
     title: string;
@@ -30,9 +31,8 @@ export default function CompanionsList({ title, companions, classNames }: Compan
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-
-                    {companions?.map(({ id, subject, name, topic, duration }) => (
-                        <TableRow key={id} >
+                    {companions?.map(({ id, subject, name, topic, duration, }, index) => (
+                        <TableRow key={index} >
                             <TableCell>
                                 <Link href={`/companions/${id}`} >
                                     <div className="flex items-center gap-3">
@@ -44,9 +44,13 @@ export default function CompanionsList({ title, companions, classNames }: Compan
                                                 height={35}
                                             />
                                         </div>
-                                        <div className="flex flex-col gap-2">
-                                            <p className="font-semibold text-xl">{name}</p>
-                                            <p className="text-base text-muted-foreground">{topic}</p>
+                                        <div className="flex flex-col gap-1">
+                                            <p className="font-semibold text-xl leading-tight">{name}</p>
+                                            <p className="text-base text-muted-foreground truncate max-w-[220px] md:max-w-[300px] lg:max-w-[400px]"
+                                                title={topic}
+                                            >
+                                                {topic}
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
@@ -70,13 +74,7 @@ export default function CompanionsList({ title, companions, classNames }: Compan
                                             mins
                                         </span>
                                     </p>
-                                    <Image
-                                        src="/icons/clock.svg"
-                                        alt="Duration"
-                                        width={14}
-                                        height={14}
-                                        className="md:hidden"
-                                    />
+                                    <Clock className="w-5 h-5" />
                                 </div>
                             </TableCell>
                         </TableRow>
